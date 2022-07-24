@@ -1,11 +1,11 @@
 import React from 'react'
 import { Button, Image, StyleSheet, View } from 'react-native'
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.container}>
         <Image source={{uri: "https://source.unsplash.com/250x250/?quiz"}} style={styles.img} />
-        <Button title='START' />
+        <Button title='START' onPress={() => navigation.navigate("Quiz")} />
     </View>
   )
 }
