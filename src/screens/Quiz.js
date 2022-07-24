@@ -5,7 +5,7 @@ const Quiz = () => {
     return (
         <View style={styles.container}>
             <View style={styles.question}>
-                <Text>This is a Question</Text>
+                <Text style={styles.questionText}>Q. This is a Question</Text>
             </View>
             <View style={styles.options}>
                 <TouchableOpacity>
@@ -22,11 +22,11 @@ const Quiz = () => {
                 </TouchableOpacity>
             </View>
             <View style={styles.buttons}>
-                <TouchableOpacity>
-                    <Text>SKIP</Text>
+                <TouchableOpacity style={styles.prevBtn}>
+                    <Text style={styles.text}>SKIP</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
-                    <Text>NEXT</Text>
+                <TouchableOpacity style={styles.nextBtn}>
+                    <Text style={styles.text}>NEXT</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -41,7 +41,10 @@ const styles = StyleSheet.create({
         padding: 16
     },
     question:{
-        marginVertical: 12
+        marginVertical: 12,
+    },
+    questionText:{
+        fontSize: 24
     },
     options:{
         marginVertical: 12,
@@ -50,5 +53,22 @@ const styles = StyleSheet.create({
     buttons:{
         flexDirection: "row",
         justifyContent: "space-between"
+    },
+    nextBtn:{
+        borderWidth: 1,
+        padding: 8,
+        backgroundColor: "#00963c",
+        borderRadius: 8,
+        borderWidth: 0
+    },
+    prevBtn:{
+        borderWidth: 1,
+        padding: 8,
+        backgroundColor: "#e63946",
+        borderRadius: 8,
+        borderWidth: 0
+    },
+    text:{
+        color: "#fff"
     }
 })

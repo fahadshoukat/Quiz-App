@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 
-const Result = () => {
+const Result = ({navigation}) => {
     return (
             <View style={styles.container}>
             <Text style={styles.heading}>Result</Text>
@@ -9,7 +9,7 @@ const Result = () => {
                     <Image source={{ uri: "https://source.unsplash.com/250x250/?congratulations" }} style={styles.img} />
                 </View>
                 <View>
-                    <TouchableOpacity style={styles.button}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
                         <Text style={styles.text}>Home</Text>
                     </TouchableOpacity>
                 </View>

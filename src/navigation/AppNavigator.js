@@ -15,8 +15,11 @@ const AppNavigator = () => {
                     backgroundColor: "#14213d",
                 },
                 headerTintColor: '#fff',
+
             }}>
-                <Stack.Screen name="Home" component={Home} />
+                <Stack.Screen name="Home" component={Home} options={{
+                    title: 'Quiz App',
+                }} />
                 <Stack.Screen name="Quiz" component={Quiz} />
                 <Stack.Screen name="Result" component={Result} />
             </Stack.Navigator>
